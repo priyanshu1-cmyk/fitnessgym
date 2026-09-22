@@ -24,7 +24,6 @@
     body { background-color: var(--dark); color: var(--text); line-height: 1.6; padding-bottom: 75px; overflow-x: hidden; }
     h1, h2, h3, h4, .brand { font-family: 'Montserrat', sans-serif; }
 
-    /* Navbar */
     nav {
       position: sticky; top: 0; z-index: 100;
       background: rgba(8, 10, 14, 0.95);
@@ -46,7 +45,6 @@
       padding: 8px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 700;
     }
 
-    /* Hero */
     .hero {
       padding: 60px 20px 45px; text-align: center;
       background: radial-gradient(circle at 50% 20%, rgba(255, 42, 75, 0.2) 0%, rgba(8, 10, 14, 0) 75%);
@@ -68,7 +66,6 @@
     .btn-green { background: #25d366; color: white; }
     .btn-outline { background: transparent; border: 1px solid var(--card-border); color: white; }
 
-    /* Live Stats Ribbon */
     .stats-bar {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
       max-width: 620px; margin: 40px auto 0; padding: 16px;
@@ -77,22 +74,17 @@
     .stat-item h3 { font-size: 1.3rem; color: var(--primary); font-weight: 900; }
     .stat-item p { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; }
 
-    /* Containers */
     .container { max-width: 800px; margin: 0 auto; padding: 50px 20px; }
     .section-tag { color: var(--primary); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; }
     .section-title { font-size: 1.65rem; font-weight: 800; margin-top: 4px; margin-bottom: 24px; }
 
-    /* Program Cards */
     .grid-2 { display: grid; grid-template-columns: 1fr; gap: 14px; }
-    .card {
-      background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px;
-    }
+    .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; }
     .program-card { display: flex; gap: 16px; align-items: flex-start; }
     .program-icon { font-size: 1.8rem; background: #1a202c; padding: 10px 14px; border-radius: 10px; }
     .program-card h4 { font-size: 1.05rem; margin-bottom: 4px; }
     .program-card p { font-size: 0.85rem; color: var(--text-muted); }
 
-    /* Pricing Plans */
     .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
     .plan-card { position: relative; }
     .plan-card.featured { border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(255, 42, 75, 0.08) 0%, #11151c 100%); }
@@ -103,7 +95,6 @@
     .plan-features { list-style: none; margin-bottom: 20px; }
     .plan-features li { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
 
-    /* Forms */
     .form-group { margin-bottom: 14px; }
     .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: #cbd5e1; margin-bottom: 6px; }
     .form-group input, .form-group select {
@@ -111,25 +102,22 @@
     }
     .form-group input:focus, .form-group select:focus { border-color: var(--primary); }
 
-    /* Member Reviews */
     .review-card { margin-bottom: 12px; }
     .review-stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 6px; }
     .review-text { font-size: 0.86rem; color: #e2e8f0; font-style: italic; margin-bottom: 8px; }
     .review-author { font-size: 0.8rem; font-weight: 700; color: var(--primary); }
 
-    /* Location Card */
     .loc-row { display: flex; gap: 12px; font-size: 0.88rem; margin-bottom: 12px; }
     .loc-row strong { min-width: 80px; color: #f1f5f9; }
 
-    /* Bottom Floating Action Bar */
     .floating-bar {
       position: fixed; bottom: 0; left: 0; width: 100%;
       background: #0d1117; border-top: 1px solid var(--card-border);
       padding: 10px 14px; display: flex; gap: 10px; z-index: 1000;
     }
-    .floating-bar a { flex: 1; text-align: center; padding: 11px; border-radius: 8px; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+    .floating-bar a, .floating-bar button { flex: 1; text-align: center; padding: 11px; border-radius: 8px; font-size: 0.86rem; font-weight: 700; text-decoration: none; border: none; }
 
-    /* ================= LOGIN & DASHBOARD MODAL SYSTEM ================= */
+    /* Modal System */
     .modal-overlay {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
       background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
@@ -169,7 +157,6 @@
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
     <div class="brand">HOLISTIC <span>FITNESS</span></div>
     <div class="nav-btns">
@@ -178,7 +165,6 @@
     </div>
   </nav>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="badge-pill">★ 5.0 Google Rated Club (109 Reviews)</div>
     <h1>Premium Fitness & Yoga In <span>Dehradun</span></h1>
@@ -189,7 +175,6 @@
       <a href="https://wa.me/918077055507?text=Hello%20Holistic%20Fitness,%20mujhe%20membership%20offers%20chahiye." target="_blank" class="btn btn-green">WhatsApp Chat</a>
     </div>
 
-    <!-- Stats -->
     <div class="stats-bar">
       <div class="stat-item">
         <h3>5.0 ★</h3>
@@ -206,7 +191,6 @@
     </div>
   </section>
 
-  <!-- Programs -->
   <section class="container">
     <div class="section-tag">Elite Training</div>
     <h2 class="section-title">Core Disciplines</h2>
@@ -243,7 +227,6 @@
     </div>
   </section>
 
-  <!-- Pricing -->
   <section class="container" style="padding-top: 0;">
     <div class="section-tag">Memberships</div>
     <h2 class="section-title">Choose Your Access Pass</h2>
@@ -267,7 +250,7 @@
         <ul class="plan-features">
           <li>✓ Gym + Yoga batch access</li>
           <li>✓ Personalized diet consultation</li>
-          <li>✓ Member App / Portal Access</li>
+          <li>✓ Member Portal Access</li>
           <li>✓ Flexible entry slots</li>
         </ul>
         <a href="#trial" class="btn btn-red" style="width:100%;">Claim Best Offer</a>
@@ -287,7 +270,6 @@
     </div>
   </section>
 
-  <!-- Trial Booking Form -->
   <section class="container" id="trial" style="padding-top: 0;">
     <div class="card" style="background: linear-gradient(135deg, #151b26 0%, #0e121a 100%); border-color: #2b3547;">
       <div class="section-tag">Instant Verification</div>
@@ -317,7 +299,6 @@
     </div>
   </section>
 
-  <!-- Verified Google Reviews -->
   <section class="container" style="padding-top: 0;">
     <div class="section-tag">Google Reviews (109+)</div>
     <h2 class="section-title">Member Experiences</h2>
@@ -341,7 +322,6 @@
     </div>
   </section>
 
-  <!-- Location & Contact -->
   <section class="container" style="padding-top: 0;">
     <div class="section-tag">Center Location</div>
     <h2 class="section-title">Visit Holistic Fitness</h2>
@@ -366,26 +346,24 @@
     </div>
   </section>
 
-  <!-- Mobile Bottom Floating Bar -->
   <div class="floating-bar">
-    <button onclick="openPortal()" class="btn-portal" style="flex:1; padding:11px;">🔐 Member Login</button>
-    <a href="https://wa.me/918077055507?text=Hello%20Holistic%20Fitness,%20I%20want%20to%20know%20about%20membership." target="_blank" class="btn-green" style="flex:1;">💬 WhatsApp</a>
+    <button onclick="openPortal()" class="btn-portal" style="background: #1e2430; color:white;">🔐 Member Login</button>
+    <a href="https://wa.me/918077055507?text=Hello%20Holistic%20Fitness,%20I%20want%20to%20know%20about%20membership." target="_blank" class="btn-green">💬 WhatsApp</a>
   </div>
 
-  <!-- ================= MEMBER PORTAL / LOGIN POPUP ================= -->
+  <!-- Member Portal Modal -->
   <div class="modal-overlay" id="portalModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closePortal()">✕</button>
       
-      <!-- STATE 1: LOGIN FORM -->
       <div id="loginView">
         <div class="portal-tag">MEMBER CLOUD PORTAL</div>
         <h3 style="margin-bottom: 6px; font-size: 1.3rem;">Holistic Member Access</h3>
-        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 18px;">Enter demo credentials or your Member ID to view your workout schedule.</p>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 18px;">Demo credentials entered below. Click Sign In.</p>
 
         <form onsubmit="handleLogin(event)">
           <div class="form-group">
-            <label>Member ID / Registered Mobile</label>
+            <label>Member ID / Mobile</label>
             <input type="text" id="memberId" value="MEMBER-8077" required>
           </div>
           <div class="form-group">
@@ -395,13 +373,9 @@
           <button type="submit" class="btn btn-red" style="width: 100%; margin-top: 8px;">
             Secure Sign In ➔
           </button>
-          <p style="text-align: center; color: var(--text-muted); font-size: 0.75rem; margin-top: 12px;">
-            Demo ID: <span style="color:white;">MEMBER-8077</span> | PIN: <span style="color:white;">1234</span>
-          </p>
         </form>
       </div>
 
-      <!-- STATE 2: ACTIVE DASHBOARD -->
       <div id="dashView" style="display: none;">
         <div class="dashboard-header">
           <div>
@@ -413,35 +387,30 @@
 
         <div class="dash-stat-grid">
           <div class="dash-chip">
-            <small>Active Membership</small>
+            <small>Active Plan</small>
             <h4>Quarterly Pro</h4>
             <span style="font-size: 0.72rem; color: var(--green);">Valid till 28 Nov</span>
           </div>
           <div class="dash-chip">
-            <small>Monthly Attendance</small>
+            <small>Attendance</small>
             <h4>19 / 24 Days</h4>
             <span style="font-size: 0.72rem; color: var(--gold);">84% Regularity</span>
           </div>
         </div>
 
-        <h4 style="font-size: 0.88rem; margin-bottom: 8px; color: #cbd5e1;">Today's Workout Routine (Chest & Triceps)</h4>
+        <h4 style="font-size: 0.88rem; margin-bottom: 8px; color: #cbd5e1;">Today's Routine (Chest & Triceps)</h4>
         <ul class="workout-list">
           <li><span>Incline Barbell Press</span> <strong>4 Sets × 10 Reps</strong></li>
           <li><span>Dumbbell Flat Bench</span> <strong>3 Sets × 12 Reps</strong></li>
           <li><span>Cable Tricep Pushdown</span> <strong>4 Sets × 15 Reps</strong></li>
-          <li><span>Evening Yoga Stretch</span> <strong>30 Mins (6:30 PM)</strong></li>
+          <li><span>Evening Yoga Session</span> <strong>6:30 PM Batch</strong></li>
         </ul>
-
-        <button onclick="alert('Digital Locker assigned: Locker #14 (Rana Tower Floor 3)')" class="btn btn-outline" style="width: 100%; margin-top: 14px; font-size: 0.8rem; padding: 8px;">
-          View Assigned Locker #14
-        </button>
       </div>
 
     </div>
   </div>
 
   <script>
-    // WhatsApp Trial Logic
     function handleGymTrial(e) {
       e.preventDefault();
       const n = document.getElementById('name').value.trim();
@@ -451,13 +420,8 @@
       window.open(`https://wa.me/918077055507?text=${msg}`, '_blank');
     }
 
-    // Portal Modal Controls
-    function openPortal() {
-      document.getElementById('portalModal').style.display = 'flex';
-    }
-    function closePortal() {
-      document.getElementById('portalModal').style.display = 'none';
-    }
+    function openPortal() { document.getElementById('portalModal').style.display = 'flex'; }
+    function closePortal() { document.getElementById('portalModal').style.display = 'none'; }
     function handleLogin(e) {
       e.preventDefault();
       document.getElementById('loginView').style.display = 'none';
