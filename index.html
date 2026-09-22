@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holistic Fitness Gym & Yoga | Premium Club Dehradun</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff2a4b;
+      --primary-glow: rgba(255, 42, 75, 0.4);
+      --dark: #080a0e;
+      --card: #11151c;
+      --card-border: #1e2430;
+      --text: #ffffff;
+      --text-muted: #8e9bb0;
+      --gold: #f59e0b;
+      --green: #10b981;
+      --blue: #3b82f6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background-color: var(--dark); color: var(--text); line-height: 1.6; padding-bottom: 75px; overflow-x: hidden; }
+    h1, h2, h3, h4, .brand { font-family: 'Montserrat', sans-serif; }
+
+    /* Navbar */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(8, 10, 14, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .brand { font-size: 1.15rem; font-weight: 900; letter-spacing: 0.5px; }
+    .brand span { color: var(--primary); }
+    .nav-btns { display: flex; gap: 8px; align-items: center; }
+    .btn-portal {
+      background: #19202c; color: #cbd5e1; border: 1px solid var(--card-border);
+      padding: 8px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: 0.2s;
+    }
+    .btn-portal:hover { border-color: var(--primary); color: white; }
+    .btn-desk {
+      background: var(--primary); color: white; text-decoration: none;
+      padding: 8px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 700;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 60px 20px 45px; text-align: center;
+      background: radial-gradient(circle at 50% 20%, rgba(255, 42, 75, 0.2) 0%, rgba(8, 10, 14, 0) 75%);
+    }
+    .badge-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #141923; border: 1px solid #232b3c;
+      padding: 6px 16px; border-radius: 30px; font-size: 0.8rem; font-weight: 700; color: var(--gold); margin-bottom: 20px;
+    }
+    .hero h1 { font-size: 2.3rem; font-weight: 900; line-height: 1.15; text-transform: uppercase; margin-bottom: 15px; }
+    .hero h1 span { color: var(--primary); }
+    .hero p { color: var(--text-muted); font-size: 0.95rem; max-width: 580px; margin: 0 auto 30px; }
+    .hero-actions { display: flex; flex-direction: column; gap: 12px; max-width: 380px; margin: 0 auto; }
+    .btn {
+      display: inline-flex; justify-content: center; align-items: center; gap: 8px;
+      padding: 13px 22px; font-weight: 700; font-size: 0.95rem; border-radius: 8px; text-decoration: none; cursor: pointer; border: none;
+    }
+    .btn-red { background: var(--primary); color: white; box-shadow: 0 4px 20px var(--primary-glow); }
+    .btn-green { background: #25d366; color: white; }
+    .btn-outline { background: transparent; border: 1px solid var(--card-border); color: white; }
+
+    /* Live Stats Ribbon */
+    .stats-bar {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+      max-width: 620px; margin: 40px auto 0; padding: 16px;
+      background: var(--card); border: 1px solid var(--card-border); border-radius: 14px;
+    }
+    .stat-item h3 { font-size: 1.3rem; color: var(--primary); font-weight: 900; }
+    .stat-item p { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; }
+
+    /* Containers */
+    .container { max-width: 800px; margin: 0 auto; padding: 50px 20px; }
+    .section-tag { color: var(--primary); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; }
+    .section-title { font-size: 1.65rem; font-weight: 800; margin-top: 4px; margin-bottom: 24px; }
+
+    /* Program Cards */
+    .grid-2 { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    .card {
+      background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px;
+    }
+    .program-card { display: flex; gap: 16px; align-items: flex-start; }
+    .program-icon { font-size: 1.8rem; background: #1a202c; padding: 10px 14px; border-radius: 10px; }
+    .program-card h4 { font-size: 1.05rem; margin-bottom: 4px; }
+    .program-card p { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* Pricing Plans */
+    .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .plan-card { position: relative; }
+    .plan-card.featured { border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(255, 42, 75, 0.08) 0%, #11151c 100%); }
+    .plan-badge { position: absolute; top: -12px; right: 20px; background: var(--primary); color: white; font-size: 0.7rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; }
+    .plan-name { font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; }
+    .plan-price { font-size: 1.8rem; font-weight: 900; margin-bottom: 15px; }
+    .plan-price span { font-size: 0.85rem; color: var(--text-muted); font-weight: 400; }
+    .plan-features { list-style: none; margin-bottom: 20px; }
+    .plan-features li { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+
+    /* Forms */
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: #cbd5e1; margin-bottom: 6px; }
+    .form-group input, .form-group select {
+      width: 100%; padding: 12px; border-radius: 8px; background: var(--dark); border: 1px solid var(--card-border); color: white; font-size: 0.9rem; outline: none;
+    }
+    .form-group input:focus, .form-group select:focus { border-color: var(--primary); }
+
+    /* Member Reviews */
+    .review-card { margin-bottom: 12px; }
+    .review-stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 6px; }
+    .review-text { font-size: 0.86rem; color: #e2e8f0; font-style: italic; margin-bottom: 8px; }
+    .review-author { font-size: 0.8rem; font-weight: 700; color: var(--primary); }
+
+    /* Location Card */
+    .loc-row { display: flex; gap: 12px; font-size: 0.88rem; margin-bottom: 12px; }
+    .loc-row strong { min-width: 80px; color: #f1f5f9; }
+
+    /* Bottom Floating Action Bar */
+    .floating-bar {
+      position: fixed; bottom: 0; left: 0; width: 100%;
+      background: #0d1117; border-top: 1px solid var(--card-border);
+      padding: 10px 14px; display: flex; gap: 10px; z-index: 1000;
+    }
+    .floating-bar a { flex: 1; text-align: center; padding: 11px; border-radius: 8px; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+
+    /* ================= LOGIN & DASHBOARD MODAL SYSTEM ================= */
+    .modal-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
+      display: none; justify-content: center; align-items: center; z-index: 2000; padding: 20px;
+    }
+    .modal-box {
+      background: #121722; border: 1px solid #283347; border-radius: 16px;
+      width: 100%; max-width: 440px; padding: 26px 22px; position: relative;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    }
+    .modal-close {
+      position: absolute; top: 16px; right: 18px; font-size: 1.4rem; color: var(--text-muted); cursor: pointer; border: none; background: none;
+    }
+    .portal-tag {
+      background: rgba(59, 130, 246, 0.15); color: var(--blue);
+      font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 10px;
+    }
+    .dashboard-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; border-bottom: 1px solid var(--card-border); padding-bottom: 12px; }
+    .dash-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+    .dash-chip { background: #0c1017; border: 1px solid var(--card-border); border-radius: 10px; padding: 12px; }
+    .dash-chip small { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; }
+    .dash-chip h4 { font-size: 1.1rem; color: white; margin-top: 4px; }
+    .workout-list { list-style: none; margin-top: 10px; }
+    .workout-list li {
+      font-size: 0.82rem; background: #161d2b; padding: 8px 12px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between;
+    }
+
+    @media (min-width: 650px) {
+      .hero h1 { font-size: 3.1rem; }
+      .hero-actions { flex-direction: row; max-width: 440px; }
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+      .floating-bar { display: none; }
+      body { padding-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="brand">HOLISTIC <span>FITNESS</span></div>
+    <div class="nav-btns">
+      <button class="btn-portal" onclick="openPortal()">🔐 Member Login</button>
+      <a href="tel:+918077055507" class="btn-desk">Call Desk</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="badge-pill">★ 5.0 Google Rated Club (109 Reviews)</div>
+    <h1>Premium Fitness & Yoga In <span>Dehradun</span></h1>
+    <p>3rd Floor Rana Tower, Ring Road. Professional hypertrophy equipment, personal floor coaching, and daily yoga batches.</p>
+    
+    <div class="hero-actions">
+      <a href="#trial" class="btn btn-red">Claim 1-Day Free Trial</a>
+      <a href="https://wa.me/918077055507?text=Hello%20Holistic%20Fitness,%20mujhe%20membership%20offers%20chahiye." target="_blank" class="btn btn-green">WhatsApp Chat</a>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <h3>5.0 ★</h3>
+        <p>Google Rating</p>
+      </div>
+      <div class="stat-item">
+        <h3>109+</h3>
+        <p>Active Reviews</p>
+      </div>
+      <div class="stat-item">
+        <h3>10 PM</h3>
+        <p>Open Daily</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="container">
+    <div class="section-tag">Elite Training</div>
+    <h2 class="section-title">Core Disciplines</h2>
+
+    <div class="grid-2">
+      <div class="card program-card">
+        <div class="program-icon">🏋️‍♂️</div>
+        <div>
+          <h4>Strength & Conditioning</h4>
+          <p>Heavy duty free weights, power racks, and functional cable stations.</p>
+        </div>
+      </div>
+      <div class="card program-card">
+        <div class="program-icon">🧘‍♀️</div>
+        <div>
+          <h4>Ashtanga & Daily Yoga</h4>
+          <p>Morning and evening batches for posture, mobility, and stress recovery.</p>
+        </div>
+      </div>
+      <div class="card program-card">
+        <div class="program-icon">🔥</div>
+        <div>
+          <h4>Fat Shred & HIIT</h4>
+          <p>Personalized cardio and circuit protocols to accelerate fat loss.</p>
+        </div>
+      </div>
+      <div class="card program-card">
+        <div class="program-icon">📋</div>
+        <div>
+          <h4>Dedicated Floor Coaches</h4>
+          <p>Certified instructors guiding correct lifting posture on every rep.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="container" style="padding-top: 0;">
+    <div class="section-tag">Memberships</div>
+    <h2 class="section-title">Choose Your Access Pass</h2>
+
+    <div class="pricing-grid">
+      <div class="card plan-card">
+        <div class="plan-name">Monthly Pass</div>
+        <div class="plan-price">Starter <span>/ 1 Month</span></div>
+        <ul class="plan-features">
+          <li>✓ Complete gym floor access</li>
+          <li>✓ General trainer guidance</li>
+          <li>✓ Locker access</li>
+        </ul>
+        <a href="#trial" class="btn btn-outline" style="width:100%;">Inquire Now</a>
+      </div>
+
+      <div class="card plan-card featured">
+        <div class="plan-badge">Most Popular</div>
+        <div class="plan-name">Quarterly Fitness</div>
+        <div class="plan-price">Transform <span>/ 3 Months</span></div>
+        <ul class="plan-features">
+          <li>✓ Gym + Yoga batch access</li>
+          <li>✓ Personalized diet consultation</li>
+          <li>✓ Member App / Portal Access</li>
+          <li>✓ Flexible entry slots</li>
+        </ul>
+        <a href="#trial" class="btn btn-red" style="width:100%;">Claim Best Offer</a>
+      </div>
+
+      <div class="card plan-card">
+        <div class="plan-name">Annual Elite</div>
+        <div class="plan-price">Yearly <span>/ 12 Months</span></div>
+        <ul class="plan-features">
+          <li>✓ Maximum savings on monthly fees</li>
+          <li>✓ Free suspension window</li>
+          <li>✓ Unlimited yoga batches</li>
+          <li>✓ Member portal & workout cards</li>
+        </ul>
+        <a href="#trial" class="btn btn-outline" style="width:100%;">Inquire Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trial Booking Form -->
+  <section class="container" id="trial" style="padding-top: 0;">
+    <div class="card" style="background: linear-gradient(135deg, #151b26 0%, #0e121a 100%); border-color: #2b3547;">
+      <div class="section-tag">Instant Verification</div>
+      <h2 class="section-title">Claim 1-Day Free Workout Pass</h2>
+      
+      <form onsubmit="handleGymTrial(event)">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="name" placeholder="Aapka naam" required>
+        </div>
+        <div class="form-group">
+          <label>WhatsApp Number</label>
+          <input type="tel" id="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+          <label>Fitness Target</label>
+          <select id="goal">
+            <option value="Fat Loss & Toning">Fat Loss & Toning</option>
+            <option value="Muscle Building / Strength">Muscle Building / Strength</option>
+            <option value="Yoga & Flexibility">Yoga & Flexibility</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-green" style="width: 100%; margin-top: 6px;">
+          Send Pass Request on WhatsApp 💬
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Verified Google Reviews -->
+  <section class="container" style="padding-top: 0;">
+    <div class="section-tag">Google Reviews (109+)</div>
+    <h2 class="section-title">Member Experiences</h2>
+
+    <div class="card review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Best decision ever! The gym's got everything – top-notch equipment, chill vibes, and trainers who actually care. Been seeing results and feeling like a beast! 10/10 would recommend 🏋️‍♂️"</p>
+      <div class="review-author">— Arun Dabral</div>
+    </div>
+
+    <div class="card review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Good place for fitness lovers... Staff is friendly and provide guidance whenever needed. Timings are flexible. Overall, the place suits well for all age groups."</p>
+      <div class="review-author">— Sakshi Spehia (Local Guide)</div>
+    </div>
+
+    <div class="card review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Best gym in town with proper functional machines and guidance from the learned and knowledgeable individuals and enough space for crowd with proper ventilation."</p>
+      <div class="review-author">— Parth Sharma</div>
+    </div>
+  </section>
+
+  <!-- Location & Contact -->
+  <section class="container" style="padding-top: 0;">
+    <div class="section-tag">Center Location</div>
+    <h2 class="section-title">Visit Holistic Fitness</h2>
+
+    <div class="card">
+      <div class="loc-row">
+        <strong>📍 Address</strong>
+        <span>6 number, 3rd floor Rana tower, Ring road, puliya, Dehradun, Uttarakhand 248001</span>
+      </div>
+      <div class="loc-row">
+        <strong>⏰ Hours</strong>
+        <span>Open Daily · Closes at 10:00 PM</span>
+      </div>
+      <div class="loc-row">
+        <strong>📞 Phone</strong>
+        <span>+91 80770 55507</span>
+      </div>
+
+      <a href="https://maps.google.com/?q=6+number+3rd+floor+Rana+tower+Ring+road+puliya+Dehradun" target="_blank" class="btn btn-red" style="width: 100%; margin-top: 10px;">
+        Open in Google Maps 📍
+      </a>
+    </div>
+  </section>
+
+  <!-- Mobile Bottom Floating Bar -->
+  <div class="floating-bar">
+    <button onclick="openPortal()" class="btn-portal" style="flex:1; padding:11px;">🔐 Member Login</button>
+    <a href="https://wa.me/918077055507?text=Hello%20Holistic%20Fitness,%20I%20want%20to%20know%20about%20membership." target="_blank" class="btn-green" style="flex:1;">💬 WhatsApp</a>
+  </div>
+
+  <!-- ================= MEMBER PORTAL / LOGIN POPUP ================= -->
+  <div class="modal-overlay" id="portalModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closePortal()">✕</button>
+      
+      <!-- STATE 1: LOGIN FORM -->
+      <div id="loginView">
+        <div class="portal-tag">MEMBER CLOUD PORTAL</div>
+        <h3 style="margin-bottom: 6px; font-size: 1.3rem;">Holistic Member Access</h3>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 18px;">Enter demo credentials or your Member ID to view your workout schedule.</p>
+
+        <form onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label>Member ID / Registered Mobile</label>
+            <input type="text" id="memberId" value="MEMBER-8077" required>
+          </div>
+          <div class="form-group">
+            <label>PIN / Password</label>
+            <input type="password" id="memberPin" value="1234" required>
+          </div>
+          <button type="submit" class="btn btn-red" style="width: 100%; margin-top: 8px;">
+            Secure Sign In ➔
+          </button>
+          <p style="text-align: center; color: var(--text-muted); font-size: 0.75rem; margin-top: 12px;">
+            Demo ID: <span style="color:white;">MEMBER-8077</span> | PIN: <span style="color:white;">1234</span>
+          </p>
+        </form>
+      </div>
+
+      <!-- STATE 2: ACTIVE DASHBOARD -->
+      <div id="dashView" style="display: none;">
+        <div class="dashboard-header">
+          <div>
+            <div class="portal-tag" style="color: var(--green); background: rgba(16,185,129,0.15);">● ACTIVE MEMBER</div>
+            <h3 style="font-size: 1.15rem;">Welcome back, Rohit Sharma</h3>
+          </div>
+          <button onclick="logoutPortal()" style="background:none; border:none; color:var(--primary); font-size:0.75rem; font-weight:700; cursor:pointer;">Sign Out</button>
+        </div>
+
+        <div class="dash-stat-grid">
+          <div class="dash-chip">
+            <small>Active Membership</small>
+            <h4>Quarterly Pro</h4>
+            <span style="font-size: 0.72rem; color: var(--green);">Valid till 28 Nov</span>
+          </div>
+          <div class="dash-chip">
+            <small>Monthly Attendance</small>
+            <h4>19 / 24 Days</h4>
+            <span style="font-size: 0.72rem; color: var(--gold);">84% Regularity</span>
+          </div>
+        </div>
+
+        <h4 style="font-size: 0.88rem; margin-bottom: 8px; color: #cbd5e1;">Today's Workout Routine (Chest & Triceps)</h4>
+        <ul class="workout-list">
+          <li><span>Incline Barbell Press</span> <strong>4 Sets × 10 Reps</strong></li>
+          <li><span>Dumbbell Flat Bench</span> <strong>3 Sets × 12 Reps</strong></li>
+          <li><span>Cable Tricep Pushdown</span> <strong>4 Sets × 15 Reps</strong></li>
+          <li><span>Evening Yoga Stretch</span> <strong>30 Mins (6:30 PM)</strong></li>
+        </ul>
+
+        <button onclick="alert('Digital Locker assigned: Locker #14 (Rana Tower Floor 3)')" class="btn btn-outline" style="width: 100%; margin-top: 14px; font-size: 0.8rem; padding: 8px;">
+          View Assigned Locker #14
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // WhatsApp Trial Logic
+    function handleGymTrial(e) {
+      e.preventDefault();
+      const n = document.getElementById('name').value.trim();
+      const p = document.getElementById('phone').value.trim();
+      const g = document.getElementById('goal').value;
+      const msg = `Namaste Holistic Fitness Team!%0A%0AMera naam *${encodeURIComponent(n)}* hai.%0APhone: *${encodeURIComponent(p)}*%0AGoal: *${encodeURIComponent(g)}*%0A%0AMujhe 1-Day Free Trial Pass issue karein.`;
+      window.open(`https://wa.me/918077055507?text=${msg}`, '_blank');
+    }
+
+    // Portal Modal Controls
+    function openPortal() {
+      document.getElementById('portalModal').style.display = 'flex';
+    }
+    function closePortal() {
+      document.getElementById('portalModal').style.display = 'none';
+    }
+    function handleLogin(e) {
+      e.preventDefault();
+      document.getElementById('loginView').style.display = 'none';
+      document.getElementById('dashView').style.display = 'block';
+    }
+    function logoutPortal() {
+      document.getElementById('dashView').style.display = 'none';
+      document.getElementById('loginView').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
